@@ -1,0 +1,19 @@
+# Credentials
+access_key = "<ACCESS_KEY>"
+secret_key = "<SECRET_KEY>"
+token      = "<TOKEN>"
+aws_key_pair = "<AWS_KEY_PAIR>"
+
+# instance 
+username   = "<USERNAME>"
+aws-ami = "<AWS-AMI>"
+instance_type = "<INSTANCE_TYPE>"
+security_group_id = [ "<SECURITY_GROUP_ID>" ]
+
+
+# storage (in GB)
+storage_size = <STORAGE_SIZE>
+
+# location
+region = "<AWS_REGION>"
+az = "<AWS_AZ>"
