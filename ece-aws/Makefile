@@ -28,7 +28,7 @@ apply: ## Apply the terraform script
 install: ## Apply the terraform script
 	@bash install.sh
 
-ssh: 	## Ssh to remote host
+ssh: 	## Ssh to remote host created with terraform
 	export SSH_OPTIONS=(-o "LogLevel=quiet" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null")
 	export PRIVATE_KEY=("$(echo var.aws_key_path | terraform console )" )
 	export REMOTE_USER=("$(echo var.remote_username | terraform console)" )
@@ -48,5 +48,5 @@ destroy: ## Destroy current terraform setup
 	export TF_VAR_token=$(AWS_SESSION_TOKEN) && \
 	terraform destroy
 
-clean: ## Clean
+clean: ## Clean all unecessary temp files
 	@rm -rf terraform.tfstate* .terraform/ bootstrap-secrets.json
