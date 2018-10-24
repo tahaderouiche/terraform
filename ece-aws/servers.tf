@@ -13,3 +13,7 @@ resource "aws_instance" "ece" {
     volume_size = "${var.storage_size}"
   }
 }
+
+output "Public IP" {
+  value = "${aws_instance.ece.public_ip}"
+}
